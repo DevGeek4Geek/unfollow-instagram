@@ -6,12 +6,12 @@ const btnFollowing = document.getElementsByClassName('-nal3')[2]
 const btnFollowers = document.getElementsByClassName('-nal3')[1]
 
 const scrollSizeBase = 20
-const unfollowTime = 5000 // Each 5 seconds
+const unfollowTime = 60000 // Each 5 seconds
 
 function unfollow(idx) {
     unfollowId(idx)
     if (idx > 0) {
-        setTimeout(_ => unfollow(idx - 1), 5000)
+        setTimeout(_ => unfollow(idx - 1), unfollowTime)
     }
 }
 
